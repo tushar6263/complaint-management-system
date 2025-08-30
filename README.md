@@ -68,7 +68,6 @@ This project is licensed under the MIT License.
 ## 🔧 Setup Instructions
 
 1. **Clone the repository**
-```bash
 git clone https://github.com/your-username/complaint-management-system.git
 cd complaint-management-system
 
@@ -94,3 +93,42 @@ npm run dev
 
 
 The application will run at http://localhost:3000.
+
+
+## 📁 Project Structure
+
+├── src/
+│   ├── app/
+│   │   ├── admin/
+│   │   │   └── page.tsx
+│   │   ├── api/
+│   │   │   └── complaints/
+│   │   │       ├── [id]/route.ts
+│   │   │       └── route.ts
+│   │   ├── complaints/
+│   │   │   └── page.tsx
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── Navbar.tsx
+│   │   ├── ComplaintForm.tsx
+│   │   └── ComplaintTable.tsx
+│   ├── lib/
+│   │   ├── db.ts
+│   │   └── mailer.ts
+│   ├── types/
+│   │   └── index.ts
+│   └── utils/
+│       └── constants.ts
+├── public/
+│   └── Images/
+├── .env.local
+├── .gitignore
+├── tsconfig.json
+├── package.json
+├── package-lock.json
+├── eslint.config.mjs
+├── next.config.ts
+├── postcss.config.mjs
+└── README.md
