@@ -21,7 +21,6 @@ export default function ComplaintTable() {
       const res = await fetch(`/api/complaints?${params.toString()}`);
       const data: MaybeResponse = await res.json();
 
-      // accept either array or { complaints: [] }
       if (Array.isArray(data)) setComplaints(data);
       else if (Array.isArray((data as any).complaints)) setComplaints((data as any).complaints);
       else setComplaints([]);
@@ -35,7 +34,6 @@ export default function ComplaintTable() {
 
   useEffect(() => {
     load();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters.status, filters.priority]);
 
   async function updateStatus(id: string, status: string) {

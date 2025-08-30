@@ -15,7 +15,7 @@ export default function ComplaintForm() {
     title: "",
     description: "",
     category: CATEGORIES[0],
-    priority: PRIORITIES[1], // Medium default
+    priority: PRIORITIES[1], 
   });
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<{ type: "ok" | "err"; text: string } | null>(null);

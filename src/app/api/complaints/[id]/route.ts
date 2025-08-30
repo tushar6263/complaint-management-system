@@ -9,7 +9,7 @@ export async function PATCH(
   context: { params: Promise<{ id: string }> }
 ) {
   await connectDB();
-  const { id } = await context.params;   // ✅ must await params
+  const { id } = await context.params;   
 
   try {
     const data = await req.json();
@@ -43,7 +43,7 @@ export async function PATCH(
 
 export async function DELETE(req: Request, context: { params: Promise<{ id: string }> }) {
   await connectDB();
-  const { id } = await context.params;  // ✅ await params
+  const { id } = await context.params;  
 
   try {
     const complaint = await Complaint.findByIdAndDelete(id);

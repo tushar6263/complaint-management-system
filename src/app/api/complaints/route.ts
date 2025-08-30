@@ -23,7 +23,7 @@ export async function POST(req: Request) {
       priority,
     });
 
-    // notify admin on new complaint
+  
     await sendEmail(
       process.env.ADMIN_EMAIL!,
       "🆕 New Complaint Submitted",
